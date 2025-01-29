@@ -162,9 +162,6 @@ export default function Home() {
               </div>
 
               <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-green-500">
-                <div className="mb-4 py-1 px-3 bg-gray-200 text-gray-800 font-semibold text-sm inline-block rounded">
-                  Coming Soon
-                </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
                     <FileCheck className="w-12 h-12 text-green-500 mb-4" />
@@ -174,11 +171,12 @@ export default function Home() {
                       requirements, providing detailed analysis and recommendations.
                     </p>
                     <ul className="text-gray-600 space-y-2">
-                      <li>• Automated policy review </li>
-                      <li>• Can consume any set of regulation </li>
-                      <li>• Great self-assessment tool for internal audit and senior managmenet </li>
-                      <li>• Self-learning capabilities </li>
-                      <li>• Consistency assessment </li>
+                      <li>• <b>Automated Compliance Review</b> – Instantly analyze new legislation and compare it against internal policies, ensuring compliance without manual effort. </li>
+                      <li>• <b>Gap Identification & Risk Mitigation</b>  – Detect discrepancies between company policies and regulatory requirements, reducing legal and financial risks. </li>
+                      <li>• <b>AI-Powered Policy Recommendations</b> – Leverage advanced AI to suggest precise updates and improvements to policies and procedures, ensuring alignment with the latest laws.</li>
+                      <li>• <b> Efficiency & Cost Savings </b> – Significantly reduce the time and resources needed for regulatory reviews, freeing compliance teams to focus on strategic initiatives.</li>
+                      <li>• <b>Regulatory Change Tracking </b> – Stay ahead of evolving laws and regulations with real-time analysis and proactive compliance updates. </li>
+                      <li>• <b>Seamless Integration & Customization </b> – Tailor the solution to industry-specific requirements and integrate it with existing document management systems for a smooth workflow.</li>
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
