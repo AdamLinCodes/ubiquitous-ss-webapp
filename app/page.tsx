@@ -25,7 +25,7 @@ export default function Home() {
                 href="#services"
                 className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-flex items-center"
               >
-                Explore Our Solutions
+                Explore Our Services and Solutions
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               <a
@@ -83,21 +83,23 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Call%20Sight%201-BLC8ssmWF5kgXGk822Wf7WhOwhy95S.png"
-                    alt="CallSight Dashboard showing call center analytics including CSAT scores, handle times, and topic analysis"
-                    width={800}
-                    height={600}
-                    className="w-full h-auto"
-                  />
+                    <video autoPlay loop muted>
+                        <source src="/videos/callsight.mp4" type="video/mp4" />
+                    </video>
+
                 </div>
               </div>
 
               <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
-                    <video autoPlay loop muted>
-                        <source src="/videos/callsight.mp4" type="video/mp4" />
-                    </video>
+                  <Image
+                    src="callcenter.gif"
+                    alt="CallSight Dashboard showing call center analytics including CSAT scores, handle times, and topic analysis"
+                    width={800}
+                    height={600}
+                    className="w-full h-auto"
+                  />
+
 
                 </div>
                 <div className="space-y-6 order-1 lg:order-2">
@@ -137,8 +139,9 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
                     <Shield className="w-12 h-12 text-blue-500 mb-4" />
-                    <h3 className="text-xl font-semibold mb-4">RPAA Assessment</h3>
+                    <h3 className="text-xl font-semibold mb-4">Retail Payments Activities Act Assessments</h3>
                     <p className="text-gray-700 mb-4">
+                      Through our partnership with the AML Shop <href></href>
                       Comprehensive operational and technical assessment for Retail Payment Activities Act compliance,
                       ensuring your organization meets all regulatory requirements.
                     </p>
@@ -152,10 +155,10 @@ export default function Home() {
                     <Image
                       src="cyberReview.png"
                       alt="IT assurance"
-                      width={300}
-                      height={200}
+                      width={450}
+                      height={300}
                        style={{ display: "block", margin: "auto" }}
-//                       className="w-auto h-auto"
+//                        className="w-auto h-auto"
                     />
                   </div>
                 </div>
@@ -190,6 +193,34 @@ export default function Home() {
                   </div>
                 </div>
               </div>
+
+              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-orange-500">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                  <div>
+                    <FileCheck className="w-12 h-12 text-green-500 mb-4" />
+                    <h3 className="text-xl font-semibold mb-4"> Consulting Services </h3>
+                    <p className="text-gray-700 mb-4">
+                      Our staff of financial industry experts have worked the country's largest financial institutions and understand industry standard work quality and best practices.
+                    </p>
+                    <ul className="text-gray-600 space-y-2">
+                      <li>• <b>Expert IT & Engineering Support</b> – Augment your teams with top-tier IT professionals, software engineers, and cloud specialists to drive digital transformation and operational efficiency.</li>
+                      <li>• <b>Regulatory & Compliance Advisory</b> – Ensure alignment with evolving financial regulations by leveraging our expert consultants, who provide strategic insights and risk mitigation guidance.</li>
+                      <li>• <b>Tailored Staffing Solutions</b> – Scale your workforce seamlessly with highly skilled professionals in development, business analysis, cybersecurity, and regulatory compliance, ensuring you meet project demands efficiently.</li>
+
+                    </ul>
+                  </div>
+                  <div className="bg-gray-50 p-6 rounded-lg">
+                    <Image
+                      src="20250127_2055_Loop Video_loop_01jjn9xd8xee9vbmch34k887ed.gif"
+                      alt="PolicyHub AI Engine visualization"
+                      width={600}
+                      height={400}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
 
               <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-red-500">
                 <div className="mb-4 py-1 px-3 bg-gray-200 text-gray-800 font-semibold text-sm inline-block rounded">
@@ -345,6 +376,7 @@ export default function Home() {
                   <option value="">Select a Service</option>
                   <option value="callsight">CallSight Platform</option>
                   <option value="rpaa">RPAA Assessment</option>
+                  <option value="consulting"> Consulting Services </option>
                   <option value="partnership">AML Shop Partnership</option>
                 </select>
               </div>
