@@ -18,7 +18,7 @@ export default function Home() {
               Ubiquitous Software Solutions Inc.
             </h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Advanced AI-powered tools for regulatory compliance and call center optimization
+              Advanced AI-powered tools for regulatory compliance and call center optimization. Making your organization run better.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
@@ -43,10 +43,9 @@ export default function Home() {
       <Fade>
         <section id="about" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Comprehensive Solutions</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">Solutions</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center">
-              We provide cutting-edge tools and services to aid companies in achieving their internal compliance goals
-              and optimizing their call center operations through AI-powered insights.
+              Providing financial institutions with reliable AI solutions, comprehensive IT and cybersecurity reviews, and tailored software for compliance, payments, and trading.
             </p>
           </div>
         </section>
@@ -55,7 +54,7 @@ export default function Home() {
       <Fade>
         <section id="callsight" className="bg-white py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center">CallSight Platform</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">CallSight</h2>
             <div className="grid grid-cols-1 gap-12">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="space-y-6">
@@ -96,13 +95,10 @@ export default function Home() {
 
               <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
-                  <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Call%20Sight%202-5NJbMlW1CiYDE15rtcq1uyyeRyVNIK.png"
-                    alt="CallSight detailed call analysis showing sentiment scores and call summary"
-                    width={800}
-                    height={600}
-                    className="w-full h-auto"
-                  />
+                    <video autoPlay loop muted>
+                        <source src="/videos/callsight.mp4" type="video/mp4" />
+                    </video>
+
                 </div>
                 <div className="space-y-6 order-1 lg:order-2">
                   <h3 className="text-2xl font-semibold mb-4">Comprehensive Call Analysis</h3>
@@ -154,11 +150,12 @@ export default function Home() {
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Operational%20Review-3QuBgCxaQEIp0OGUaS0xfJWfHyoNSD.png"
-                      alt="Operational Review AI Engine workflow diagram"
-                      width={600}
-                      height={400}
-                      className="w-full h-auto"
+                      src="cyberReview.png"
+                      alt="IT assurance"
+                      width={300}
+                      height={200}
+                       style={{ display: "block", margin: "auto" }}
+//                       className="w-auto h-auto"
                     />
                   </div>
                 </div>
@@ -173,19 +170,21 @@ export default function Home() {
                     <FileCheck className="w-12 h-12 text-green-500 mb-4" />
                     <h3 className="text-xl font-semibold mb-4">PolicyHub</h3>
                     <p className="text-gray-700 mb-4">
-                      AI-powered tool that automatically reviews your internal policy documents against regulatory
+                      Our AI-powered workflow tool that automatically reviews your internal policy documents against regulatory
                       requirements, providing detailed analysis and recommendations.
                     </p>
                     <ul className="text-gray-600 space-y-2">
-                      <li>• Automated policy review</li>
-                      <li>• Self-learning capabilities</li>
-                      <li>• Consistency assessment</li>
+                      <li>• Automated policy review </li>
+                      <li>• Can consume any set of regulation </li>
+                      <li>• Great self-assessment tool for internal audit and senior managmenet </li>
+                      <li>• Self-learning capabilities </li>
+                      <li>• Consistency assessment </li>
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Policy%20Hub-2jHEmDBkCaKP9uW07zTvcnX7w1mY9J.png"
-                      alt="PolicyHub AI Engine workflow diagram"
+                      src="20250127_2055_Loop Video_loop_01jjn9xd8xee9vbmch34k887ed.gif"
+                      alt="PolicyHub AI Engine visualization"
                       width={600}
                       height={400}
                       className="w-full h-auto"
@@ -287,6 +286,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold mb-8 text-center">Strategic Partnership</h2>
             <div className="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-lg shadow-md">
               <h3 className="text-xl font-semibold mb-4 text-center">The AML Shop Partnership</h3>
+
               <p className="text-gray-700 text-center mb-6">
                 Through our partnership with The AML Shop, we provide comprehensive risk management framework reviews
                 tailored to the Retail Payments Activities Act requirements.
@@ -372,9 +372,9 @@ export default function Home() {
         </section>
       </Fade>
 
-      <footer className="bg-gradient-to-r from-blue-800 via-green-800 via-orange-800 to-red-800 text-white py-8">
+      <footer className="bg-gradient-to-r from-green-800 via-green-800 via-orange-800 to-red-800 text-white py-8">
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2023 Your Company. All rights reserved.</p>
+          <p>&copy; 2025 Ubiquitous Software Solutions. All rights reserved.</p>
         </div>
       </footer>
     </main>
