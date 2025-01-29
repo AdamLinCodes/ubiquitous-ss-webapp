@@ -18,7 +18,7 @@ export default function Home() {
               Ubiquitous Software Solutions Inc.
             </h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Advanced AI-powered tools for regulatory compliance and call center optimization. Making your organization run better.
+              Advanced AI-powered tools for regulatory compliance and call center optimization. Helping you run your organization better.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <a
@@ -119,6 +119,14 @@ export default function Home() {
                       <span>Automated call summarization and topic detection</span>
                     </li>
                     <li className="flex items-start">
+                      <FileCheck className="w-6 h-6 mr-2 text-green-500" />
+                      <span>Identify sales</span>
+                    </li>
+                    <li className="flex items-start">
+                      <FileCheck className="w-6 h-6 mr-2 text-green-500" />
+                      <span>Automated call summarization and topic detection</span>
+                    </li>
+                    <li className="flex items-start">
                       <Building className="w-6 h-6 mr-2 text-orange-500" />
                       <span>Performance metrics and trending analysis</span>
                     </li>
@@ -139,9 +147,9 @@ export default function Home() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
                     <Shield className="w-12 h-12 text-blue-500 mb-4" />
-                    <h3 className="text-xl font-semibold mb-4">Retail Payments Activities Act Assessments</h3>
+                    <h3 className="text-xl font-semibold mb-4">Retail Payments Activities Act Cybersecurity and IT Assessments</h3>
                     <p className="text-gray-700 mb-4">
-                      Through our partnership with the AML Shop <href></href>
+
                       Comprehensive operational and technical assessment for Retail Payment Activities Act compliance,
                       ensuring your organization meets all regulatory requirements.
                     </p>
@@ -149,6 +157,11 @@ export default function Home() {
                       <li>• Full compliance evaluation</li>
                       <li>• Technical infrastructure review</li>
                       <li>• Risk assessment reports</li>
+                      <li>• Through our partnership with the <a href="https://www.theamlshop.ca" target="_blank"  rel="noopener noreferrer">AML Shop </a>
+                        we are able to provide a complete RPAA assessment for your firm's ability to meet the rules for the Retail Payments Activities Act.
+
+                      </li>
+
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
@@ -327,9 +340,20 @@ export default function Home() {
                 </div>
                 <div className="bg-white p-4 rounded-md shadow">
                   <h4 className="font-semibold mb-2">Compliance Strategy</h4>
-                  <p className="text-gray-600">Tailored recommendations for meeting RPAA standards</p>
+                  <p className="text-gray-600">Tailored recommendations for meeting the Retail Payments Activities Act standards</p>
                 </div>
               </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white p-4 rounded-md shadow">
+                    <h4 className="font-semibold mb-2">Reporting Readiness</h4>
+                    <p className="text-gray-600">Review and assessment of your firm's reporting capabilities</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-md shadow">
+                    <h4 className="font-semibold mb-2">Best Practices and Recommendations</h4>
+                    <p className="text-gray-600"> Solid, actionable recommendations for cybersecurity and information technology organizational gaps</p>
+                  </div>
+                </div>
+
             </div>
           </div>
         </section>
