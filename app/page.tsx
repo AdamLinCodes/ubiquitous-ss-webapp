@@ -426,7 +426,7 @@ export default function Home() {
         </section>
       </Fade>
 
-      <footer className="bg-gradient-to-r from-blue-800 via-green-800 to-red-800 text-white py-8">
+      <footer className="bg-gradient-to-r from-blue-500 to-red-500 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; 2025 Ubiquitous Software Solutions. All rights reserved.</p>
         </div>

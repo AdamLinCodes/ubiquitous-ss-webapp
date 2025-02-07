@@ -11,7 +11,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <a
           href="#"
-          className="text-2xl font-bold text-transparent bg-clip-text text-blue-600"
+          className="text-2xl font-bold bg-clip-text text-blue-800"
         >
           Ubiquitous
         </a>
