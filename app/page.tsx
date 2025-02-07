@@ -11,7 +11,7 @@ export default function Home() {
       <Fade>
         <section
           id="hero"
-          className="bg-gradient-to-r from-blue-500 via-green-500 via-orange-500 to-red-500 text-white py-20"
+          className="bg-gradient-to-r from-blue-500 to-red-500 text-white py-20"
         >
           <div className="container mx-auto text-center px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
@@ -255,7 +255,7 @@ export default function Home() {
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Operational%20Review-3QuBgCxaQEIp0OGUaS0xfJWfHyoNSD.png"
+                      src="OperationalReviewDiagram.png"
                       alt="Operational Review AI Engine workflow diagram"
                       width={600}
                       height={400}
@@ -417,7 +417,7 @@ export default function Home() {
               </div>
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-blue-500 via-green-500 via-orange-500 to-red-500 text-white py-3 rounded font-semibold hover:opacity-90 transition duration-300"
+                className="w-full bg-gradient-to-r bg-blue-600 text-white py-3 rounded font-semibold hover:opacity-90 transition duration-300"
               >
                 Send Message
               </button>
@@ -426,7 +426,7 @@ export default function Home() {
         </section>
       </Fade>
 
-      <footer className="bg-gradient-to-r from-green-800 via-green-800 via-orange-800 to-red-800 text-white py-8">
+      <footer className="bg-gradient-to-r from-blue-800 via-green-800 to-red-800 text-white py-8">
         <div className="container mx-auto px-4 text-center">
           <p>&copy; 2025 Ubiquitous Software Solutions. All rights reserved.</p>
         </div>
