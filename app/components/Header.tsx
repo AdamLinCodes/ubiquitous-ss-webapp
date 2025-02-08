@@ -20,13 +20,13 @@ export default function Header() {
             Home
           </a>
           <a href="#about" className="text-gray-700 hover:text-green-600 transition duration-300">
-            About
+            About Us
           </a>
           <a href="#services" className="text-gray-700 hover:text-orange-600 transition duration-300">
             Services
           </a>
           <a href="#partnership" className="text-gray-700 hover:text-red-600 transition duration-300">
-            Partnership
+            Partnerships
           </a>
           <a href="#contact" className="text-gray-700 hover:text-blue-600 transition duration-300">
             Contact

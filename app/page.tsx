@@ -43,9 +43,9 @@ export default function Home() {
       <Fade>
         <section id="about" className="py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Solutions</h2>
+            <h2 className="text-3xl font-bold mb-8 text-center">About Us</h2>
             <p className="text-lg text-gray-700 max-w-3xl mx-auto text-center">
-              Providing financial institutions with reliable AI solutions, comprehensive IT and cybersecurity reviews, and tailored software for compliance, payments, and trading.
+              Ubiquitous Software is a Toronto-based technology firm specializing in regulatory compliance solutions powered by advanced artificial intelligence. Our innovative platform helps organizations streamline compliance processes by analyzing legislation and identifying gaps in internal policies and procedures. With a focus on the financial services and banking sectors, we provide AI-driven insights, consulting services, and staff augmentation to ensure our clients stay ahead in a constantly evolving regulatory landscape.
             </p>
           </div>
         </section>
@@ -159,7 +159,6 @@ export default function Home() {
                       <li>• Risk assessment reports</li>
                       <li>• Through our partnership with the <a href="https://www.theamlshop.ca" target="_blank"  rel="noopener noreferrer">AML Shop </a>
                         we are able to provide a complete RPAA assessment for your firm's ability to meet the rules for the Retail Payments Activities Act.
-
                       </li>
 
                     </ul>
@@ -171,7 +170,6 @@ export default function Home() {
                       width={450}
                       height={300}
                        style={{ display: "block", margin: "auto" }}
-//                        className="w-auto h-auto"
                     />
                   </div>
                 </div>
@@ -269,7 +267,9 @@ export default function Home() {
         </section>
       </Fade>
 
+      {/*
       <Fade>
+        TODO REMOVE THIS SECTION
         <section id="regulations" className="py-20 bg-gradient-to-r from-blue-50 to-green-50">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-12 text-center">Regulations We Support</h2>
@@ -321,14 +321,19 @@ export default function Home() {
           </div>
         </section>
       </Fade>
-
+        */}
       <Fade>
         <section id="partnership" className="py-20 bg-white">
+          <h2 className="text-3xl font-bold mb-8 text-center">Strategic Partnerships</h2>
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-8 text-center">Strategic Partnership</h2>
+            <Image
+              src="THE-AML-SHOP+-+Logo+-+Black-Txt-Ver-FN+2-A.png"
+              alt="The AML Shop Logo"
+              width={300}
+              height={200}
+              style={{ display: "block", margin: "auto" }}
+            />
             <div className="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-lg shadow-md">
-              <h3 className="text-xl font-semibold mb-4 text-center">The AML Shop Partnership</h3>
-
               <p className="text-gray-700 text-center mb-6">
                 Through our partnership with The AML Shop, we provide comprehensive risk management framework reviews
                 tailored to the Retail Payments Activities Act requirements.
@@ -353,10 +358,44 @@ export default function Home() {
                     <p className="text-gray-600"> Solid, actionable recommendations for cybersecurity and information technology organizational gaps</p>
                   </div>
                 </div>
-
             </div>
           </div>
+          <div className="container mx-auto px-4">
+              <Image
+                src="MSS_Logo.png"
+                alt="Mackenzie Strategic Services Logo"
+                width={300}
+                height={200}
+                style={{ display: "block", margin: "auto" }}
+              />
+              <div className="max-w-3xl mx-auto bg-gradient-to-r from-blue-50 to-green-50 p-8 rounded-lg shadow-md">
+                <p className="text-gray-700 text-center mb-6">
+                  Texty textual text. Some more text.
+                </p>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-white p-4 rounded-md shadow">
+                    <h4 className="font-semibold mb-2">Enhanced Compliance Assurance</h4>
+                    <p className="text-gray-600">Gain peace of mind with thorough reviews that ensure your organization's policies and procedures meet or exceed FINTRAC regulatory requirements</p>
+                  </div>
+                  <div className="bg-white p-4 rounded-md shadow">
+                    <h4 className="font-semibold mb-2">Industry Expertise</h4>
+                    <p className="text-gray-600">Leverage deep regulatory knowledge and sector-specific experience to strengthen your compliance framework and reduce exposure to regulatory risk.</p>
+                  </div>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-white p-4 rounded-md shadow">
+                      <h4 className="font-semibold mb-2">Tailored Solutions</h4>
+                      <p className="text-gray-600">Receive customized assessments and actionable recommendations, helping your organization close compliance gaps and stay ahead of evolving regulations.</p>
+                    </div>
+                    <div className="bg-white p-4 rounded-md shadow">
+                      <h4 className="font-semibold mb-2">Risk Mitigation and Operational Efficiency</h4>
+                      <p className="text-gray-600"> Ensure compliance while improving operational processes, reducing penalties, and aligning your business with regulatory expectations.</p>
+                    </div>
+                  </div>
+              </div>
+            </div>
         </section>
+
       </Fade>
 
       <Fade>
