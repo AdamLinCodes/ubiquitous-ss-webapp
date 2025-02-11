@@ -8,6 +8,8 @@
 
 
 #TODO, dave.
+1. header is missing from adam's branch
+2. the policyHub gif is missing
 1. change the logo from the chip U to the infinity one
 2. change the icon that shows on browser tab
 4. make carousel cards for products
