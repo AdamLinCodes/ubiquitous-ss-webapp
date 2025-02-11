@@ -1,6 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* slick-carousel styles */
+@import "~slick-carousel/slick/slick.css";
+@import "~slick-carousel/slick/slick-theme.css";
 
 
 :root {
@@ -28,3 +31,8 @@ body {
   opacity: 1;
 }
 
+.slick-prev:before,
+.slick-next:before {
+  font-size: 40px;  /* Increase font size */
+  color: black;     /* Change color if desired */
+}

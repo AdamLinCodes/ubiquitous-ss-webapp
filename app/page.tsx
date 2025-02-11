@@ -1,31 +1,124 @@
+'use client'
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+import './globals.css';
 import 'react';
 import Header from "./components/Header";
 import { Fade } from "./components/Animations";
 import { Shield, FileCheck, Building, ArrowRight, Phone, BookOpen, Scale, Smile, FileText, AlignJustify, Book, DollarSign, EyeOff } from "lucide-react";
 import Icon from '@mdi/react';
-import { mdiFormatListBulleted, mdiCashMultiple, mdiMagnifyClose, mdiEmoticonHappyOutline, mdiStarOutline, mdiThumbUpOutline  } from '@mdi/js'; //https://pictogrammers.com/library/mdi/
+import { mdiCheckOutline, mdiFormatListBulleted, mdiCashMultiple, mdiMagnifyClose, mdiEmoticonHappyOutline, mdiStarOutline, mdiThumbUpOutline  } from '@mdi/js'; //https://pictogrammers.com/library/mdi/
+
+import dynamic from "next/dynamic";
+import Slider from "react-slick";
 import Image from "next/image";
 
 
-
 export default function Home() {
+    const carouselSettings = {
+      dots: true,
+      infinite: true,
+      speed: 500,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      autoplay: false,
+      autoplaySpeed: 4000,
+    };
   return (
     <main className="min-h-screen bg-gray-100">
       <Header />
 
       <Fade>
-        <section
-          id="hero"
-          className="bg-gradient-to-r from-blue-500 to-red-500 text-white py-20"
-        >
-          <div className="container mx-auto text-center px-4">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+        <section id="hero" className="py-20 bg-gradient-to-r from-blue-500 to-red-500 text-white">
+          <div className="container mx-auto px-4">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
               Ubiquitous Software Solutions Inc.
             </h1>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <p className="text-xl mb-8 max-w-2xl mx-auto text-center">
               Advanced AI-powered tools for regulatory compliance and call center optimization. Helping you run your organization better.
             </p>
-            <div className="flex flex-wrap gap-4 justify-center">
+            <Slider {...carouselSettings}>
+              <div className="carousel-card">
+                <div className="flex flex-col md:flex-row items-center justify-between w-full h-full p-8 rounded-lg shadow-lg gap-12 bg-opacity-80">
+                  {/* Left Side: Text Content */}
+                  <div className="flex-1">
+                    <h3 className="text-3xl font-semibold mb-6">Callsight</h3>
+                    <p className="text-lg mb-6">
+                      Powerful insights into call center activity, helping you optimize operations and improve customer experience.
+                    </p>
+                    <ul className="space-y-2">
+                        <li className="flex items-center space-x-4">
+                            <Icon path={mdiCheckOutline} size={1} color="white" />
+                            <span className="">Track calls</span>
+                        </li>
+                        <li className="flex items-center space-x-4">
+                            <Icon path={mdiCheckOutline} size={1} color="white" />
+                            <span className="">Understand your clients</span>
+                        </li>
+                        <li className="flex items-center space-x-4">
+                            <Icon path={mdiCheckOutline} size={1} color="white" />
+                            <span className="">Train your agents</span>
+                        </li>
+                    </ul>
+                    <div className="flex flex-wrap gap-8 mt-8">
+                        <a href="#callsight"
+                          className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition duration-300 inline-flex items-centerflex flex-wrap gap-8 mt-8"
+                        >
+                          Discover Callsight
+                        </a>
+                        <a href="#contact"
+                          className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition duration-300 inline-flex items-centerflex flex-wrap gap-8 mt-8"
+                        >
+                          Schedule a Free Demo
+                        </a>
+                    </div>
+                  </div>
+
+                  {/* Right Side: Image */}
+                  <div className="flex-1 flex justify-center h-full">
+                    <Image
+                      src="callsight_dashboard.png"
+                      alt="CallSight Dashboard"
+                      layout="intrinsic"
+                      width={600}
+                      height={400}
+                      className="rounded-lg shadow-lg object-cover w-full h-auto"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="flex flex-col items-center">
+                {/*}<Image
+                  src="/policyhub-visual.png"
+                  alt="PolicyHub AI Engine"
+                  width={800}
+                  height={400}
+                  className="rounded-lg shadow-lg"
+                />*/}
+                <h3 className="text-2xl font-semibold mt-6">PolicyHub</h3>
+                <p className="text-gray-200 max-w-xl text-center">
+                  AI-powered tool to assess your company’s documentation against regulatory requirements.
+                  Some more text.
+                </p>
+              </div>
+              <div className="flex flex-col items-center">
+                <Image
+                  src="/operational-review.png"
+                  alt="Operational Review Platform"
+                  width={800}
+                  height={400}
+                  className="rounded-lg shadow-lg"
+                />
+                <h3 className="text-2xl font-semibold mt-6">Operational Review Hub</h3>
+                <p className="text-gray-200 max-w-xl text-center">
+                  Advanced platform for transaction monitoring, risk scoring, and suspicious activity detection.
+                </p>
+              </div>
+            </Slider>
+
+            <div className="flex flex-wrap gap-4 justify-center mt-8">
               <a
                 href="#services"
                 className="bg-white text-gray-800 px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300 inline-flex items-center"
@@ -33,13 +126,7 @@ export default function Home() {
                 Explore Our Services and Solutions
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
-              <a
-                href="#callsight"
-                className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition duration-300 inline-flex items-center"
-              >
-                Discover Callsight
-                <Phone className="ml-2 h-5 w-5" />
-              </a>
+
             </div>
           </div>
         </section>
