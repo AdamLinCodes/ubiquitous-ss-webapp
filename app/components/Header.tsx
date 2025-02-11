@@ -9,12 +9,19 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <a
-          href="#"
-          className="text-2xl font-bold bg-clip-text text-blue-800"
-        >
-          Ubiquitous
-        </a>
+         <div className="flex items-center space-x-2">
+            <img
+              src="ubiquitous_logo.png"
+              alt="Company Logo"
+              className="h-20 w-20 object-contain"
+            />
+            <a
+              href="#"
+              className="justify-left text-2xl font-bold bg-clip-text text-blue-800 pl-1"
+            >
+              Ubiquitous
+            </a>
+        </div>
         <nav className="hidden md:flex space-x-8">
           <a href="#" className="text-gray-700 hover:text-blue-600 transition duration-300">
             Home

@@ -8,7 +8,6 @@
 
 
 #TODO, dave.
-1. add logo in header
 2. change the icon that shows on browser tab
 3. move policy hub under products section
 4. make summary cards for products
