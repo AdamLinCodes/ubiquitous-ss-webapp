@@ -1,7 +1,12 @@
-import Header from "./components/Header"
-import { Fade } from "./components/Animations"
-import { Shield, FileCheck, Building, ArrowRight, Phone, BookOpen, Scale } from "lucide-react"
-import Image from "next/image"
+import 'react';
+import Header from "./components/Header";
+import { Fade } from "./components/Animations";
+import { Shield, FileCheck, Building, ArrowRight, Phone, BookOpen, Scale, Smile, FileText, AlignJustify, Book, DollarSign, EyeOff } from "lucide-react";
+import Icon from '@mdi/react';
+import { mdiFormatListBulleted, mdiCashMultiple, mdiMagnifyClose, mdiEmoticonHappyOutline, mdiStarOutline, mdiThumbUpOutline  } from '@mdi/js'; //https://pictogrammers.com/library/mdi/
+import Image from "next/image";
+
+
 
 export default function Home() {
   return (
@@ -32,7 +37,7 @@ export default function Home() {
                 href="#callsight"
                 className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition duration-300 inline-flex items-center"
               >
-                Discover CallSight
+                Discover Callsight
                 <Phone className="ml-2 h-5 w-5" />
               </a>
             </div>
@@ -54,11 +59,11 @@ export default function Home() {
       <Fade>
         <section id="callsight" className="bg-white py-20">
           <div className="container mx-auto px-4">
-            <h2 className="text-3xl font-bold mb-12 text-center">CallSight</h2>
+            <h2 className="text-3xl font-bold mb-12 text-center">Callsight</h2>
             <div className="grid grid-cols-1 gap-12">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
                 <div className="space-y-6">
-                  <h3 className="text-2xl font-semibold mb-4">Deep Call Center Insights</h3>
+                  <h3 className="text-2xl font-semibold mb-4">Powerful Call Center Insights</h3>
                   <p className="text-gray-700">
                     CallSight provides powerful and deep insights into your call center activity, helping you understand
                     your customers better and optimize your operations.
@@ -81,13 +86,8 @@ export default function Home() {
                       <p className="text-gray-600">Detailed sentiment scoring for agents and clients</p>
                     </div>
                   </div>
-                </div>
-                <div className="bg-white rounded-xl shadow-lg overflow-hidden">
-                    <video autoPlay loop muted>
-                        <source src="/videos/callsight.mp4" type="video/mp4" />
-                    </video>
 
-                </div>
+
               </div>
 
               <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -99,8 +99,6 @@ export default function Home() {
                     height={600}
                     className="w-full h-auto"
                   />
-
-
                 </div>
                 <div className="space-y-6 order-1 lg:order-2">
                   <h3 className="text-2xl font-semibold mb-4">Comprehensive Call Analysis</h3>
@@ -109,26 +107,22 @@ export default function Home() {
                     summarization technology. Track agent performance, customer satisfaction, and identify key topics
                     and trends.
                   </p>
-                  <ul className="space-y-4 text-gray-600">
-                    <li className="flex items-start">
-                      <Shield className="w-6 h-6 mr-2 text-blue-500" />
-                      <span>Real-time sentiment analysis for both agents and customers</span>
+                  <ul className="space-y-2 text-gray-600 ">
+                    <li className="flex items-center space-x-4">
+                      <Icon path={mdiFormatListBulleted} size={2} color="black" />
+                      <span className="">Automated call summarizations by topic and trend analysis</span>
                     </li>
-                    <li className="flex items-start">
-                      <FileCheck className="w-6 h-6 mr-2 text-green-500" />
-                      <span>Automated call summarization and topic detection</span>
+                    <li className="flex items-center space-x-4">
+                      <Icon path={mdiCashMultiple} size={2} color="black" />
+                      <span>Understand when sales happen and identify sales opportunities</span>
                     </li>
-                    <li className="flex items-start">
-                      <FileCheck className="w-6 h-6 mr-2 text-green-500" />
-                      <span>Identify sales</span>
+                    <li className="flex items-center space-x-4">
+                      <Icon path={mdiMagnifyClose} size={2} color="black" />
+                      <span>Find, detect and prevent fraudulent activities</span>
                     </li>
-                    <li className="flex items-start">
-                      <FileCheck className="w-6 h-6 mr-2 text-green-500" />
-                      <span>Automated call summarization and topic detection</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Building className="w-6 h-6 mr-2 text-orange-500" />
-                      <span>Performance metrics and trending analysis</span>
+                    <li className="flex items-center space-x-4">
+                      <Icon path={mdiThumbUpOutline} size={2} color="black" />
+                      <span>Understand your clients better and train your agents</span>
                     </li>
                   </ul>
                 </div>
@@ -136,7 +130,53 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section id="policyhub" className="bg-white py-20">
+                  <div className="container mx-auto px-4">
+                    <h2 className="text-3xl font-bold mb-12 text-center">PolicyHub</h2>
+                    <div className="grid grid-cols-1 gap-12">
+                      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-6">
+                          <h3 className="text-2xl font-semibold mb-4 text-center">Regulatory compliance, simplified</h3>
+                          <p className="text-gray-700">
+                            PolicyHub is an artificial intelligence-powered tool you can leverage to assess your company's documentation against regulations.
+                          </p>
+                          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <div className="bg-blue-50 p-4 rounded-lg">
+                              <h4 className="font-semibold mb-2">Automated Compliance Review</h4>
+                              <p className="text-gray-600">Instantly analyze new legislation and compare it against internal policies, ensuring compliance without manual effort. </p>
+                            </div>
+                            <div className="bg-green-50 p-4 rounded-lg">
+                              <h4 className="font-semibold mb-2">Gap Identification & Risk Mitigationn</h4>
+                              <p className="text-gray-600">Detect discrepancies between company policies and regulatory requirements, reducing legal and financial risks.</p>
+                            </div>
+                            <div className="bg-orange-50 p-4 rounded-lg">
+                              <h4 className="font-semibold mb-2">AI-Powered Policy Recommendations</h4>
+                              <p className="text-gray-600">Leverage advanced AI to suggest precise updates and improvements to policies and procedures, ensuring alignment with the latest laws.</p>
+                            </div>
+                            <div className="bg-red-50 p-4 rounded-lg">
+                              <h4 className="font-semibold mb-2">Efficiency & Cost Savings</h4>
+                              <p className="text-gray-600">Significantly reduce the time and resources needed for regulatory reviews, freeing compliance teams to focus on strategic initiatives.</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+                            <Image
+                                src="policyhub_brain.gif"
+                                alt="PolicyHub AI Engine visualization"
+                                width={600}
+                                height={400}
+                                className="w-full h-auto"
+                             />
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
       </Fade>
+
+
+
 
       <Fade>
         <section id="services" className="bg-gradient-to-r from-blue-100 via-green-100 via-orange-100 to-red-100 py-20">
@@ -174,7 +214,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
+                {/*
               <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-green-500">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
@@ -203,8 +243,9 @@ export default function Home() {
                     />
                   </div>
                 </div>
-              </div>
 
+              </div>
+               */}
               <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-orange-500">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
@@ -221,13 +262,13 @@ export default function Home() {
                     </ul>
                   </div>
                   <div className="bg-gray-50 p-6 rounded-lg">
-                    <Image
+                    {/*<Image
                       src="20250127_2055_Loop Video_loop_01jjn9xd8xee9vbmch34k887ed.gif"
                       alt="PolicyHub AI Engine visualization"
                       width={600}
                       height={400}
                       className="w-full h-auto"
-                    />
+                    />*/}
                   </div>
                 </div>
               </div>
