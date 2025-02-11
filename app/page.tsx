@@ -248,7 +248,7 @@ export default function Home() {
                         </div>
                         <div className="bg-white rounded-xl shadow-lg overflow-hidden">
                             <Image
-                                src="policyhub_brain.gif"
+                                src="policyHub_brain.gif"
                                 alt="PolicyHub AI Engine visualization"
                                 width={600}
                                 height={400}
