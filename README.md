@@ -17,5 +17,8 @@
 5. add in white label software services
 7. there is yellow around the call center stuff cards
 8. parralax of our office location
+9. clean up the wording in the RPAA section
+10. add in trAice section
+
 
 

@@ -74,8 +74,6 @@ export default function Home() {
                         </a>
                     </div>
                   </div>
-
-                  {/* Right Side: Image */}
                   <div className="flex-1 flex justify-center h-full">
                     <Image
                       src="callsight_dashboard.png"

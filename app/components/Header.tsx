@@ -11,7 +11,7 @@ export default function Header() {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
          <div className="flex items-center space-x-2">
             <img
-              src="ubiquitous_logo.png"
+              src="USS_logo.png"
               alt="Company Logo"
               className="h-20 w-20 object-contain"
             />
