@@ -9,9 +9,9 @@ import { Shield, FileCheck, Building, ArrowRight, Phone, BookOpen, Scale, Smile,
 import Icon from '@mdi/react';
 import { mdiCheckOutline, mdiFormatListBulleted, mdiCashMultiple, mdiMagnifyClose, mdiEmoticonHappyOutline, mdiStarOutline, mdiThumbUpOutline  } from '@mdi/js'; //https://pictogrammers.com/library/mdi/
 
-import dynamic from "next/dynamic";
-import Slider from "react-slick";
-import Image from "next/image";
+import dynamic from "next/dynamic"; //carousel
+import Slider from "react-slick"; //carousel
+import Image from "next/image"; //carousel
 
 
 export default function Home() {
@@ -41,7 +41,6 @@ export default function Home() {
             <Slider {...carouselSettings}>
               <div className="carousel-card">
                 <div className="flex flex-col md:flex-row items-center justify-between w-full h-full p-8 rounded-lg shadow-lg gap-12 bg-opacity-80">
-                  {/* Left Side: Text Content */}
                   <div className="flex-1">
                     <h3 className="text-3xl font-semibold mb-6">Callsight</h3>
                     <p className="text-lg mb-6">
@@ -73,47 +72,68 @@ export default function Home() {
                           Schedule a Free Demo
                         </a>
                     </div>
-                  </div>
-                  <div className="flex-1 flex justify-center h-full">
+                 </div>
+
+                 <div className="flex-1 flex justify-center h-full">
                     <Image
                       src="callsight_dashboard.png"
                       alt="CallSight Dashboard"
                       layout="intrinsic"
-                      width={600}
-                      height={400}
+                      width={300}
+                      height={200}
                       className="rounded-lg shadow-lg object-cover w-full h-auto"
                     />
                   </div>
                 </div>
               </div>
+              <div className="carousel-card">
+                  <div className="flex flex-col md:flex-row items-center justify-between w-full h-full p-8 rounded-lg shadow-lg gap-12 bg-opacity-80">
+                    <div className="flex-1">
+                      <h3 className="text-3xl font-semibold mb-6">trAIce</h3>
+                      <p className="text-lg mb-6">
+                        Anti-money laundering and fraud solution for transaction monitoring.
+                      </p>
+                      <ul className="space-y-2">
+                          <li className="flex items-center space-x-4">
+                              <img src="cropped_traice-solutions1_2.png" alt="trAIce sol 1" loading="lazy"  style={{ maxHeight: '50px' }} />
+                              {/*}<img src='traice-solutions-1-resized.2c0d75d4.png'>*/}
+                              <span className="">AML Monitoring</span>
+                          </li>
+                          <li className="flex items-center space-x-4">
+                              <img src="cropped_traice-solutions2_2.png" alt="trAIce sol 1" loading="lazy" style={{ maxHeight: '50px' }} />
+                              <span className="">Fraud Detection</span>
+                          </li>
+                          <li className="flex items-center space-x-4">
+                              <img src="cropped_traice-solutions3_2.png" alt="trAIce sol 1" loading="lazy" style={{ maxHeight: '50px' }} />
+                              <span className="">Compliance and Contract Analytics</span>
+                          </li>
+                      </ul>
+                      <div className="flex flex-wrap gap-8 mt-8">{/* need to update this to reflect the trAIce section*/}
+                          <a href="https://www.traice.ca" target="_blank"
+                            className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition duration-300 inline-flex items-centerflex flex-wrap gap-8 mt-8"
+                          >
+                            Discover trAice
+                          </a>
+                          <a href="#contact"
+                            className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-gray-800 transition duration-300 inline-flex items-centerflex flex-wrap gap-8 mt-8"
+                          >
+                            Schedule a Free Demo
+                          </a>
+                      </div>
+                   </div>
+                   <div className="flex-1 flex justify-center h-full">
+                                  <Image
+                                    src="traice-logo.png"
+                                    alt="trAIce logo"
+                                    layout="intrinsic"
+                                    width={300}
+                                    height={200}
+                                    className="rounded-lg object-cover w-full h-auto"
+                                  />
+                                </div>
+                              </div>
+                            </div>
 
-              <div className="flex flex-col items-center">
-                {/*}<Image
-                  src="/policyhub-visual.png"
-                  alt="PolicyHub AI Engine"
-                  width={800}
-                  height={400}
-                  className="rounded-lg shadow-lg"
-                />*/}
-                <h3 className="text-2xl font-semibold mt-6">PolicyHub</h3>
-                <p className="text-gray-200 max-w-xl text-center">
-                  AI-powered tool to assess your company’s documentation against regulatory requirements.
-                  Some more text.
-                </p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Image
-                  src="/operational-review.png"
-                  alt="Operational Review Platform"
-                  width={800}
-                  height={400}
-                  className="rounded-lg shadow-lg"
-                />
-                <h3 className="text-2xl font-semibold mt-6">Operational Review Hub</h3>
-                <p className="text-gray-200 max-w-xl text-center">
-                  Advanced platform for transaction monitoring, risk scoring, and suspicious activity detection.
-                </p>
-              </div>
             </Slider>
 
             <div className="flex flex-wrap gap-4 justify-center mt-8">
