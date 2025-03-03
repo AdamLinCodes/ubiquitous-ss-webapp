@@ -6,7 +6,7 @@ import { Card, CardContent } from "@/components/ui/card"
 
 const stats = [
   {
-    value: "5+",
+    value: "100+",
     label: "Years Experience",
     icon: Building2,
   },
@@ -16,7 +16,7 @@ const stats = [
     icon: Users,
   },
   {
-    value: "1M+",
+    value: "1000+",
     label: "Documents Analyzed",
     icon: BarChart3,
   },
@@ -35,12 +35,7 @@ const features = [
     icon: Shield,
     color: "bg-green-500",
   },
-  {
-    title: "Recognition",
-    description: "Award-winning technology recognized by leading financial institutions.",
-    icon: Award,
-    color: "bg-orange-500",
-  },
+
 ]
 
 const containerVariants = {
@@ -79,7 +74,7 @@ export default function AboutSection() {
                 About Us
               </motion.h2>
               <motion.p variants={itemVariants} className="text-xl max-w-3xl mx-auto">
-                Toronto's leading technology firm specializing in AI-powered regulatory compliance solutions
+              Ubiquitous Software is a Toronto-based technology firm specializing in regulatory compliance solutions powered by advanced artificial intelligence. Our innovative platform helps organizations streamline compliance processes by analyzing legislation and identifying gaps in internal policies and procedures. With a focus on the financial services and banking sectors, we provide AI-driven insights, consulting services, and staff augmentation to ensure our clients stay ahead in a constantly evolving regulatory landscape.
               </motion.p>
             </div>
 

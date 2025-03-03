@@ -17,7 +17,11 @@ interface CarouselItemType {
   ctaLinks: { href: string; text: string; target?: string }[]
 }
 
-export default function ProductCarousel() {
+interface ProductCarouselProps {
+  onProductSelect: (productTitle: string) => void
+}
+
+export default function ProductCarousel({ onProductSelect }: ProductCarouselProps) {
   const [api, setApi] = useState<any>()
   const [current, setCurrent] = useState(0)
   const [count, setCount] = useState(0)
@@ -33,11 +37,15 @@ export default function ProductCarousel() {
     })
   }, [api])
 
+  const handleDemoClick = (productTitle: string) => {
+    onProductSelect(productTitle)
+  }
+
   const carouselItems: CarouselItemType[] = [
     {
       title: "Callsight",
       description:
-        "Powerful insights into call center activity, helping you optimize operations and improve customer experience.",
+        "Powerful insights into your call center's activity, helping you optimize operations and improve customer experience.",
       features: ["Track calls", "Understand your clients", "Train your agents"],
       image: { src: "callsight_dashboard.png", alt: "CallSight Dashboard", width: 300, height: 200 },
       ctaLinks: [
@@ -81,14 +89,14 @@ export default function ProductCarousel() {
           <CarouselContent>
             {carouselItems.map((item, index) => (
               <CarouselItem key={index} className="md:basis-full">
-                <ProductCard item={item} />
+                <ProductCard item={item} onDemoClick={handleDemoClick} />
               </CarouselItem>
             ))}
           </CarouselContent>
 
-          <div className="hidden md:flex items-center justify-between absolute top-1/2 left-0 right-0 -translate-y-1/2 z-10 px-4">
-            <CarouselPrevious className="relative left-0 translate-y-0 h-12 w-12" />
-            <CarouselNext className="relative right-0 translate-y-0 h-12 w-12" />
+          <div className="hidden md:flex items-center justify-between absolute top-1/2 left-0 right-0 -translate-y-1/2 z-10 px-8">
+            <CarouselPrevious className="relative -left-16 translate-y-0 h-12 w-12" />
+            <CarouselNext className="relative -right-16 translate-y-0 h-12 w-12" />
           </div>
         </Carousel>
 
@@ -110,13 +118,18 @@ export default function ProductCarousel() {
   )
 }
 
-function ProductCard({ item }: { item: CarouselItemType }) {
+interface ProductCardProps {
+  item: CarouselItemType
+  onDemoClick: (productTitle: string) => void
+}
+
+function ProductCard({ item, onDemoClick }: ProductCardProps) {
   return (
     <Card className="overflow-hidden border-none shadow-lg bg-white/50 rounded-xl">
       <CardContent className="p-0">
         <div className="">
           <div className="flex flex-col lg:flex-row items-center gap-8 p-6 md:p-8 lg:p-10">
-            <div className="flex-1 space-y-6">
+            <div className="flex-1 space-y-6 max-w-[55%]">
               <Badge
                 variant="secondary"
                 className="text-sm font-medium px-3 py-1 bg-white/20 hover:bg-white/30"
@@ -151,6 +164,11 @@ function ProductCard({ item }: { item: CarouselItemType }) {
                         ? "border-white hover:bg-white hover:text-blue-800"
                         : "bg-white text-blue-800 hover:bg-white/90"
                     }
+                    onClick={() => {
+                      if (link.text === "Schedule a Free Demo") {
+                        onDemoClick(item.title)
+                      }
+                    }}
                   >
                     <a href={link.href} target={link.target || "_self"}>
                       {link.text}
@@ -160,14 +178,14 @@ function ProductCard({ item }: { item: CarouselItemType }) {
               </div>
             </div>
 
-            <div className="flex-shrink-0 flex items-center justify-center p-4 bg-white/10 rounded-xl">
-              <div className="relative overflow-hidden rounded-lg">
+            <div className="flex-shrink-0 flex items-center justify-center p-4 bg-white/10 rounded-xl w-[45%]">
+              <div className="relative overflow-hidden rounded-lg w-full">
                 <Image
                   src={item.image.src || "/placeholder.svg"}
                   alt={item.image.alt}
                   width={item.image.width}
                   height={item.image.height}
-                  className="object-contain max-h-[300px] w-auto"
+                  className="object-contain max-h-[400px] min-w-[300px] w-auto mx-auto"
                 />
               </div>
             </div>

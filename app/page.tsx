@@ -11,8 +11,22 @@ import ProductCarousel from "./components/ProductCarousel"
 import "./globals.css"
 import AboutSection from "./components/AboutSectioni"
 import ContactForm from "./components/ContactForm"
+import { useEffect, useState } from "react"
 
 export default function Home() {
+  const [selectedProduct, setSelectedProduct] = useState<string>("")
+
+  const handleProductSelect = (productTitle: string) => {
+    setSelectedProduct(productTitle)
+  }
+
+  useEffect(() => {
+    // Check for selected product in localStorage on component mount
+    const product = localStorage.getItem("selectedProduct")
+    if (product) {
+      setSelectedProduct(product)
+    }
+  }, [])
 
   return (
     <main className="min-h-screen">
@@ -27,7 +41,7 @@ export default function Home() {
               organization better.
             </p>
 
-            <ProductCarousel />
+            <ProductCarousel onProductSelect={handleProductSelect} />
 
             <div className="flex flex-wrap gap-4 justify-center mt-8">
               <a
@@ -399,7 +413,7 @@ export default function Home() {
       </Fade>
 
       <Fade>
-        <ContactForm/>
+        <ContactForm productTitle={selectedProduct} />
       </Fade>
 
       <footer className="bg-gradient-to-r from-blue-500 to-red-500 text-white py-8">

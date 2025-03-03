@@ -3,6 +3,10 @@
 import { Resend } from "resend"
 import { z } from "zod"
 
+if (!process.env.RESEND_API_KEY) {
+  throw new Error("Missing RESEND_API_KEY environment variable")
+}
+
 const resend = new Resend(process.env.RESEND_API_KEY)
 
 // Form validation schema
@@ -29,8 +33,8 @@ export async function sendEmail(formData: FormData) {
 
   try {
     await resend.emails.send({
-      from: "Contact Form <onboarding@resend.dev>", // Update this with your verified domain
-      to: "adamnlin@gmail.com", // Replace with your email
+      from: "Ubiquitous Software Solutions <Info@ubiquitoussoftware.com>",
+      to: "Info@ubiquitoussoftware.com",
       replyTo: email,
       subject: `New Contact Form Submission - ${service}`,
       html: `
