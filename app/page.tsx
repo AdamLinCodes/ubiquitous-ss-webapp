@@ -2,7 +2,7 @@
 import "react"
 import Header from "./components/Header"
 import { Fade } from "./components/Animations"
-import { Shield, FileCheck, Building, ArrowRight } from "lucide-react"
+import { Shield, FileCheck, Building, ArrowRight, Brain, TrendingUp, AlertTriangle, Heart } from "lucide-react"
 import Icon from "@mdi/react"
 import { mdiFormatListBulleted, mdiCashMultiple, mdiMagnifyClose, mdiThumbUpOutline } from "@mdi/js" //https://pictogrammers.com/library/mdi/
 
@@ -16,8 +16,16 @@ import { useEffect, useState } from "react"
 export default function Home() {
   const [selectedProduct, setSelectedProduct] = useState<string>("")
 
-  const handleProductSelect = (productTitle: string) => {
-    setSelectedProduct(productTitle)
+  const handleProductSelect = (productTitle: string, isContactSales: boolean = false) => {
+    // Only remove "Schedule a demo" if it's coming from a Contact Sales button
+    const cleanTitle = isContactSales ? productTitle : productTitle.replace("Schedule a demo - ", "")
+    setSelectedProduct(cleanTitle)
+    
+    // Smooth scroll to the contact form
+    const contactForm = document.getElementById('contact')
+    if (contactForm) {
+      contactForm.scrollIntoView({ behavior: 'smooth' })
+    }
   }
 
   useEffect(() => {
@@ -33,7 +41,7 @@ export default function Home() {
       <Header />
 
       <Fade>
-        <section id="hero" className="py-20">
+        <section id="hero" className="py-12">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">Ubiquitous Software Solutions Inc.</h1>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-center">
@@ -64,34 +72,45 @@ export default function Home() {
         <section id="callsight" className="bg-white py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-12 text-center">Callsight</h2>
-            <div className="grid grid-cols-1 gap-12">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-semibold mb-4">Powerful Call Center Insights</h3>
-                <p className="text-gray-700">
+            <div className="grid grid-cols-1 gap-0">
+              <div className="space-y-2">
+                <h3 className="text-2xl font-semibold mb-2">Powerful Call Center Insights</h3>
+                <p className="text-gray-700 mb-4">
                   CallSight provides powerful and deep insights into your call center activity, helping you understand
                   your customers better and optimize your operations.
                 </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-0 justify-items-center">
                   <div className="bg-blue-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Smart Summaries</h4>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Brain className="w-5 h-5 text-blue-500" />
+                      <h4 className="font-semibold">Smart Summaries</h4>
+                    </div>
                     <p className="text-gray-600">Accurate, AI-powered call summaries and trend reporting</p>
                   </div>
                   <div className="bg-green-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Opportunity Detection</h4>
+                    <div className="flex items-center gap-2 mb-2">
+                      <TrendingUp className="w-5 h-5 text-green-500" />
+                      <h4 className="font-semibold">Opportunity Detection</h4>
+                    </div>
                     <p className="text-gray-600">Automated identification of sales opportunities</p>
                   </div>
                   <div className="bg-orange-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Fraud Prevention</h4>
+                    <div className="flex items-center gap-2 mb-2">
+                      <AlertTriangle className="w-5 h-5 text-orange-500" />
+                      <h4 className="font-semibold">Fraud Prevention</h4>
+                    </div>
                     <p className="text-gray-600">Advanced scanning and detection of potential fraud</p>
                   </div>
                   <div className="bg-red-50 p-4 rounded-lg">
-                    <h4 className="font-semibold mb-2">Sentiment Analysis</h4>
+                    <div className="flex items-center gap-2 mb-2">
+                      <Heart className="w-5 h-5 text-red-500" />
+                      <h4 className="font-semibold">Sentiment Analysis</h4>
+                    </div>
                     <p className="text-gray-600">Detailed sentiment scoring for agents and clients</p>
                   </div>
                 </div>
               </div>
-
-              <div className="mt-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                 <div className="bg-white rounded-xl shadow-lg overflow-hidden order-2 lg:order-1">
                   <Image
                     src="callcenter.gif"
@@ -191,11 +210,10 @@ export default function Home() {
         <section id="services" className="bg-gradient-to-r from-blue-100 via-green-100 via-orange-100 to-red-100 py-20">
           <div className="container mx-auto px-4">
             <h2 className="text-3xl font-bold mb-12 text-center">Our Services</h2>
-            <div className="grid grid-cols-1 gap-16">
-              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-blue-500">
+            <div className="grid grid-cols-1 gap-8">
+              <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <Shield className="w-12 h-12 text-blue-500 mb-4" />
                     <h3 className="text-xl font-semibold mb-4">
                       Retail Payments Activities Act Cybersecurity and IT Assessments
                     </h3>
@@ -217,22 +235,29 @@ export default function Home() {
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-gray-50 p-6 rounded-lg">
+                  <div className="bg-gray-50 p-6 rounded-lg flex items-center justify-center">
                     <Image
                       src="cyberReview.png"
                       alt="IT assurance"
                       width={450}
                       height={300}
-                      style={{ display: "block", margin: "auto" }}
+                      className="w-auto h-full max-h-[300px] object-contain"
                     />
                   </div>
                 </div>
+                <div className="mt-6 text-center">
+                  <button
+                    onClick={() => handleProductSelect("Retail Payments Activities Act Cybersecurity and IT Assessments - Information Request", true)}
+                    className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300"
+                  >
+                    Contact Sales
+                  </button>
+                </div>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-green-500">
+              <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <FileCheck className="w-12 h-12 text-green-500 mb-4" />
                     <h3 className="text-xl font-semibold mb-4">White Label Software</h3>
                     <p className="text-gray-700 mb-4">
                       Customized software for your company. Our engineers and developers can build software that meets
@@ -252,16 +277,27 @@ export default function Home() {
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-gray-50 p-6 rounded-lg flex justify-center items-center">
-                    <img src="whitelabel.png" alt="white label service" loading="lazy" style={{ maxHeight: "300px" }} />
+                  <div className="bg-gray-50 p-6 rounded-lg flex items-center justify-center">
+                    <img 
+                      src="whitelabel.png" 
+                      alt="white label service" 
+                      className="w-auto h-full max-h-[300px] object-contain"
+                    />
                   </div>
+                </div>
+                <div className="mt-6 text-center">
+                  <button
+                    onClick={() => handleProductSelect("White Label Software - Information Request", true)}
+                    className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300"
+                  >
+                    Contact Sales
+                  </button>
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-orange-500">
+              <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <FileCheck className="w-12 h-12 text-green-500 mb-4" />
                     <h3 className="text-xl font-semibold mb-4"> Consulting Services </h3>
                     <p className="text-gray-700 mb-4">
                       Our staff of financial industry experts have worked the country's largest financial institutions
@@ -285,36 +321,63 @@ export default function Home() {
                       </li>
                     </ul>
                   </div>
+                  <div className="bg-gray-50 p-6 rounded-lg flex items-center justify-center">
+                    <Image
+                      src="consulting_image.png"
+                      alt="Consulting Services"
+                      width={450}
+                      height={300}
+                      className="w-auto h-full max-h-[300px] object-contain"
+                    />
+                  </div>
+                </div>
+                <div className="mt-6 text-center">
+                  <button
+                    onClick={() => handleProductSelect("Consulting Services - Information Request", true)}
+                    className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300"
+                  >
+                    Contact Sales
+                  </button>
                 </div>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-red-500">
+              <div className="bg-white p-8 rounded-lg shadow-md">
                 <div className="mb-4 py-1 px-3 bg-gray-200 text-gray-800 font-semibold text-sm inline-block rounded">
                   Coming Soon
                 </div>
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                   <div>
-                    <Building className="w-12 h-12 text-red-500 mb-4" />
                     <h3 className="text-xl font-semibold mb-4">Operational Review Hub</h3>
                     <p className="text-gray-700 mb-4">
-                      Advanced platform for transaction monitoring and compliance filing, featuring automated suspicious
-                      activity detection and STR generation.
+                      Advanced platform for transaction monitoring and xompliance filings, featuring automated suspicious
+                      activity detection and Fintrac Suspicious Transaction Report (STR) generation.
                     </p>
                     <ul className="text-gray-600 space-y-2">
                       <li>• Transaction monitoring</li>
+                      <li>• Automatically generates STRs from your transaction data</li>
+                      <li>• Reviews historic transaction data for missed STRs</li>
+                      <li>• Reviews previously filed STRs and checks for missing or incorrect information</li>
                       <li>• Risk level scoring</li>
-                      <li>• Automated STR generation</li>
+                      
                     </ul>
                   </div>
-                  <div className="bg-gray-50 p-6 rounded-lg">
+                  <div className="bg-gray-50 p-6 rounded-lg flex items-center justify-center">
                     <Image
                       src="OperationalReviewDiagram.png"
                       alt="Operational Review AI Engine workflow diagram"
                       width={600}
                       height={400}
-                      className="w-full h-auto"
+                      className="w-auto h-full max-h-[300px] object-contain"
                     />
                   </div>
+                </div>
+                <div className="mt-6 text-center">
+                  <button
+                    onClick={() => handleProductSelect("Operational Review Hub - Information Request", true)}
+                    className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition duration-300"
+                  >
+                    Contact Sales
+                  </button>
                 </div>
               </div>
             </div>

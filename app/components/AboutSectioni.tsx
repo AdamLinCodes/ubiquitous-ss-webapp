@@ -58,7 +58,7 @@ const itemVariants = {
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-20">
+    <section id="about" className="py-12">
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -100,7 +100,7 @@ export default function AboutSection() {
             </motion.div>
 
             {/* Main Content */}
-            <motion.div variants={containerVariants} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+            <motion.div variants={containerVariants} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <motion.div variants={itemVariants} className="bg-white/80 p-8 rounded-lg shadow-lg space-y-6">
                 <h3 className="text-2xl font-semibold text-gray-900">Transforming Regulatory Compliance</h3>
                 <p className="text-gray-700 leading-relaxed">

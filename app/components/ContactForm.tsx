@@ -46,7 +46,22 @@ export default function ContactForm({ productTitle }: ContactFormProps) {
   // Update the subject field when productTitle changes
   useEffect(() => {
     if (productTitle) {
-      form.setValue("subject", `Schedule a demo - ${productTitle}`)
+      // List of service section headings
+      const serviceHeadings = [
+        "Retail Payments Activities Act Cybersecurity and IT Assessments",
+        "White Label Software",
+        "Consulting Services",
+        "Operational Review Hub"
+      ]
+
+      // Check if the productTitle matches any service heading
+      const isServiceHeading = serviceHeadings.some(heading => 
+        productTitle.includes(heading)
+      )
+
+      // Only add "Schedule a demo - " if it's not a service heading
+      const subject = isServiceHeading ? productTitle : `Schedule a demo - ${productTitle}`
+      form.setValue("subject", subject)
     }
   }, [productTitle, form])
 
